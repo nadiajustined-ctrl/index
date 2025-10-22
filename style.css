@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* scrolbar*/
+::-webkit-scrolbar{
+    width: 8px;
+}
+::-webkit-scrolbar-thumb{
+    width: 5px;
+    background-color: rgb(177, 173, 173);
+    border-radius: 6px;
+}
+body{
+    background-color: #eae2d2;
+}
+a{
+    text-decoration: 0;
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+ul{
+    list-style:none ;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 8%;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+.header_logo{
+    font-weight: 500;
+}
+.header_menu{
+    display: flex;
+}
+.header_menu a{
+    margin-left:20px ;
+    padding-bottom: 3px;
+    position: relative;
+}
+.header_menu a:after{
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: #000;
+    transition: 0.5s ease-out;
+}
+.header_menu a:hover::after{
+    width: 100%;
+}
+.header_button a{
+    margin-left: 20px;
+}
+.header_button a:last-child{
+    border: 1px solid #000;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+.header_button a:last-child:hover{
+    background-color: #000;
+    color: #fff;
+}
+/*classe  */
+.tittle{
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: #5e493a;
+}
+p{
+    color: rgb(97,96,96);
+    margin: 20px 0;
+    letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 25px;
+}
+/*acceui  */
+.acceuil{
+    padding: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh -80px);
+    width: 100%;
+}
+.acceuil_left{
+    width: 35%;
+}
+.acceuil_left a{
+    text-decoration: none;
+    padding: 8px 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 25px;
+
+
+}
+.acceuil_right{
+    width: 60%;
+    height: 400px;
+}
+.acceuil_right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.acceuil_button button{ 
+    border: 1px solid #000;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 25px;
+    background-color: transparent;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px rgb(0, 0 ,0 ,0.1);
+}
+.acceuil_button button:hover{
+    background-color: #000;
+    color: #eae2d2;
+    transition: 0.5s ease-out;
+}
+.acceuil_abou-us{
+    position: relative;
+    top: 100%;
+    right: 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    flex-direction: column;
+    background-color: #eae2d2;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    width: 50%;
+}
+.acceuil_button button:last-child{
+    margin-left: 20px;
+}
+.acceuil_button button:last-child:focus.acceuil_abou-us{
+    width: 52%;
+    border-left: 1px solid #5e493a;
+}
+.acceuil_abou-us h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #000;
+}
+/* acceuil */
+
+/* meilleure vente */
+.meilleure-vente{
+    padding: 20px;
+    text-align: center;
+}
+.vente_produit{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: 100vh;
+
+}
+.div1{
+    grid-area: 1/1/6/3;
+}
+.div2{
+    grid-area: 2/3/7/5;
+}
+.div3{
+    grid-area: 1/5/7/6;
+}
+.div4{
+    grid-area: 1/3/2/5;
+}
+.div5{
+    grid-area: 6/1/7/3;
+
+}
+.div6{
+    grid-area: 1/6/6/8;
+}
+.div7{
+    grid-area: 6/6/7/8;
+}
+.vente_produit div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s ease-out;
+}
+.vente_produit  div img:hover{
+    filter: grayscale(0);
+}
+.vente_produit span{
+    color: #5e493a;
+    text-transform: uppercas;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.div5,.div4,.div7,.div3 {
+    border: 1px solid #000;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.div3{
+    width: 170px;
+    background-color: #000;
+}
+.div3 span{
+    transform: rotate(-90deg);
+    color: #fff;
+    font-size: 50px;
+}
+
+/* img section */
+
+.img-section{
+    padding: 100px;
+    width: 100%;
+
+}
+.img-section_content{
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 8px rgb(0,0,0,0.2);
+}
+.img-section h2 {
+    text-align: center;
+    margin: 50px 0;
+}
+.img-section_content h3{
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+.img-section img {
+    width: 50%;
+    transition: 0.5s;
+    filter: grayscale(100);
+}
+.img-section img:hover {
+    filter: grayscale(0);
+}
+.img-section_content p{
+    text-align: center;
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 0;
+    margin-top: 20px;
+    box-shadow: 0 0 8px rgb(0,0,0,0.2);
+}
+/* section des categories */
+.categories{
+    margin: 70px 0;
+    text-align: center;
+}
+.col-3{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-3 img{
+    width: 200%;
+    padding: 20px;
+    object-fit: cover;
+    height: 500%;
+}
+ /* section habit */
+ h2{
+ text-align: center;
+}
+.col4{
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col4 img{
+    width: 50%;
+    padding: 20px;
+    object-fit: cover;
+    height: 50%;
+}
+/* section variétés*/
+.variétés{
+    text-align: center;
+}
+.col5{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col5 img{
+    width: 50%;
+    padding: 20px;
+    object-fit: cover;
+    height: 50%;
+
+}
+    /* sac */
+ h4{
+    text-align: center;
+}
+.col6{
+margin-top: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.col6 img{
+    width: 20%;
+    padding: 15px;
+    object-fit: cover;
+    height: 20%;
+}
+/* footer */
+.footer{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 0;
+    padding: 35px 8%;
+    margin-top: 35px;
+    text-transform: uppercase;
+}
+.col1{
+    grid-area: 5/6/4/8;
+}
+.col1 img{
+    width: 20%;
+}
+.col2{
+    grid-area: 1/4/4/6;
+
+}
+.col3{
+    grid-area: 1/6/4/8;
+}
+.col4{
+    grid-area: 1/1/8/10;
+}
+.col2,.col3{
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    border: 1px solid #000;
+    box-shadow: 0 0 8px rgb(0,0,0,0.1);
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.footer input{
+    width: 35%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+
+}
+.footer button{
+    background-color: transparent;
+    width: 76px;
+    height: 100%;
+    border: 0;
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+}
+.footer button:hover{
+    font-weight:bold ;
+}
+.icon{
+    display: flex;
+}
+.icon i{
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    font-size: 14px;
+    border-radius: 50%;
+    transition: 0.5s ease-out;
+}
+.icon i:hover{
+    background-color: #000;
+    color: #fff;
+}
